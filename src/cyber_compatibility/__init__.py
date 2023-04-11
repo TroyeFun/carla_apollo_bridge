@@ -19,7 +19,7 @@ import cyber_compatibility.node
 
 from cyber_compatibility.loggings import logdebug, loginfo, logwarn, logerr, logfatal
 
-from cyber_py import cyber, cyber_time
+from cyber_py3 import cyber, cyber_time
 
 def init(name, args=None):
     cyber.init(name)
@@ -39,6 +39,6 @@ def get_timestamp(sec=0, nsec=0, from_sec=False):
         total = cyber_time.Time(float(sec)).to_nsec()
     else:
         total = cyber_time.Time(long(sec) * 1000000000 + long(nsec))
-    secs = total / 1000000000
+    secs = total // 1000000000
     nsecs = total - secs * 1000000000
     return {'secs': secs, 'nsecs': nsecs}

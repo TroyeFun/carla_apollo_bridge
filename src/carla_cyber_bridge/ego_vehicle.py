@@ -28,14 +28,14 @@ from cyber.carla_bridge.carla_proto.proto.carla_ego_vehicle_pb2 import (
 )
 from cyber.carla_bridge.carla_proto.proto.carla_marker_pb2 import ColorRGBA
 from cyber.carla_bridge.carla_proto.proto.carla_geometry_pb2 import Twist, Accel
-from modules.localization.proto.localization_pb2 import LocalizationEstimate, LocalizationStatus
-from modules.localization.proto.gps_pb2 import Gps
-from modules.canbus.proto.chassis_pb2 import Chassis
-from modules.control.proto.control_cmd_pb2 import ControlCommand
-from modules.planning.proto.planning_pb2 import ADCTrajectory
-from modules.common.proto.error_code_pb2 import ErrorCode
-from modules.routing.proto.routing_pb2 import RoutingResponse
-from modules.transform.proto.transform_pb2 import TransformStamped, TransformStampeds
+from modules.common_msgs.localization_msgs.localization_pb2 import LocalizationEstimate, LocalizationStatus
+from modules.common_msgs.localization_msgs.gps_pb2 import Gps
+from modules.common_msgs.chassis_msgs.chassis_pb2 import Chassis
+from modules.common_msgs.control_msgs.control_cmd_pb2 import ControlCommand
+from modules.common_msgs.planning_msgs.planning_pb2 import ADCTrajectory
+from modules.common_msgs.basic_msgs.error_code_pb2 import ErrorCode
+from modules.common_msgs.routing_msgs.routing_pb2 import RoutingResponse
+from modules.common_msgs.transform_msgs.transform_pb2 import TransformStamped, TransformStampeds
 
 
 class EgoVehicle(Vehicle):
