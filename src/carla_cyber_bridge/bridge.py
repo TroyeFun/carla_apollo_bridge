@@ -421,6 +421,7 @@ def main(args=None):
     carla_bridge.loginfo("Trying to connect to {host}:{port}".format(
         host=parameters['host'], port=parameters['port']))
 
+    import pdb; pdb.set_trace()
     try:
         carla_client = carla.Client(
             host=parameters['host'],
